@@ -68,15 +68,22 @@ function exp() {
     var lim = 0;
     if (exclude == counter) {
         present = expense / counter;
-    } else {
+    } 
+    else {
         present = expense / selected;
     }
-
     var calex = document.getElementById("calex");
     calex.value = cal + expense;
     var you = parseInt(document.getElementById("you").value);
     var checkBox = document.getElementById("myCheck");
-    if (checkBox.checked == true) {
+    
+    if(document.getElementById("exampleRadios1").checked) { 
+            
+        
+        var cost = document.getElementById("cost");
+        cost.value = expense / counter + co; 
+    } 
+    else if (checkBox.checked == true) {
         
         if(you == 0){
             var cost = document.getElementById("cost");
@@ -90,8 +97,11 @@ function exp() {
  
     } 
     else {
+        
         var cost = document.getElementById("cost");
         cost.value = co;
+        
+        
     }
 
     var res = document.getElementById("res");
@@ -148,9 +158,11 @@ function showpanel2() {
         document.getElementById("panel").style.display = "none";
 
     }
+    
 }
 
 function showpanelback() {
+    $('input[type="checkbox"]:checked').prop('checked',false);
     document.getElementById("panel").style.display = "block";
     document.getElementById("panelex").style.display = "none";
 }
