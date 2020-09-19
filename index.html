@@ -41,7 +41,7 @@
                     <label id="other">Your Name</label>
                     <input type="text" name="you" placeholder="&#xf023 Your Good Name" required>
                     <div id="dynamicInput">
-                        Person 2<br><input type="text" name="myInputs[]"  id="xyz" required>
+                        Person 2<br><input type="text" name="myInputs[]" id="xyz" required>
                     </div>
                     <input type="button" value="Add new person" onClick="addInput('dynamicInput');">
                     <hr id="top-hr">
@@ -59,7 +59,7 @@
                     <input type="text" name="event" placeholder="&#xf0e0 What for?" required>
                     <br>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" onclick="ShowHideDiv()" checked>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" onclick="Hide()" checked>
                         <label class="form-check-label" for="exampleRadios1">
                             Split Equally
                         </label>
@@ -70,11 +70,34 @@
                             Split Differently
                         </label>
                         <br>
-                        <div id="dvPassport" >
-                            <a> (select number of people to be excluded from this split)</a>
-                            <input type="number" id="choice" value="0" name="choice">
+                        <div class="form-check" id="checkbox1">
+                            
+                            <input type="checkbox" class="form-check-input" id="materialChecked1" checked>
+                            <label class="form-check-label" for="materialChecked2">You</label>
+                            <input type="number" value="0" class="check-input" id="materialChecked1">
+                        </div>
+                        <div class="form-check" id="checkbox2">
+                            <input type="checkbox" class="form-check-input" id="materialChecked2" checked>
+                            <label class="form-check-label" for="materialChecked2">Person 2</label>
+                            <input type="number" value="0" class="check-input" id="materialChecked2">
+                        </div>
+                        <div class="form-check" id="checkbox3">
+                            <input type="checkbox" class="form-check-input" id="materialChecked3" >
+                            <label class="form-check-label" for="materialChecked2">Person 3</label>
+                            <input type="number" value="0" class="check-input" id="materialChecked3">
+                        </div>
+                        <div class="form-check" id="checkbox4">
+                            <input type="checkbox" class="form-check-input" id="materialChecked4" >
+                            <label class="form-check-label" for="materialChecked2">Person 4</label>
+                            <input type="number" value="0" class="check-input" id="materialChecked4">
+                        </div>
+                        <div class="form-check" id="checkbox5">
+                            <input type="checkbox" class="form-check-input" id="materialChecked5" >
+                            <label class="form-check-label" for="materialChecked2">Person 5</label>
+                            <input type="number" value="0" class="check-input" id="materialChecked5">
                         </div>
                         
+
                     </div>
 
                     <input type="button" value="Add expense" onclick="exp()">

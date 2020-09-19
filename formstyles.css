@@ -106,9 +106,15 @@ input,select{
 }
 .form-check-input{
         width: 10%;
+        font-size: 15px;
+        padding: 2px 1px;
 }
-.check{
-    width: 10%;
+.check-input{
+    width: 25%;
+    font-size: 15px;
+    margin-right: 0px;
+    padding: 5px 3px;
+    align-content: center;
 }
 input::placeholder{
     font-weight: 600;

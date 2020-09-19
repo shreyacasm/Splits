@@ -9,3 +9,6 @@
 #sdiff {
     display: none;
 }
+#checkbox1 , #checkbox2, #checkbox3, #checkbox4, #checkbox5 {
+    display: none;
+}
