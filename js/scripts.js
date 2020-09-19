@@ -36,3 +36,13 @@ function showpanel() {
   document.getElementById("panel").style.display = "block";
   document.getElementById("main").style.display = "none";
 }
+
+function showpanel2() {
+  document.getElementById("panelex").style.display = "block";
+  document.getElementById("panel").style.display = "none";
+}
+function showpanelback() {
+    document.getElementById("panel").style.display = "block";
+    document.getElementById("panelex").style.display = "none";
+  
+}

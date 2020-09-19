@@ -67,28 +67,19 @@
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
                         <label class="form-check-label" for="exampleRadios2">
-                            Split Differently
+                            Split Differently (select number of people to be excluded from this split)
                         </label>
-                        <br>
-                        <input class="check" type="checkbox" name="vehicle1" value="Bike">
-                        <label for="vehicle1">You</label><br>
-                        <input class="check" type="checkbox" name="vehicle2" value="Car">
-                        <label for="vehicle2">person1</label><br>
-                        <input class="check" type="checkbox" name="vehicle1" value="Bike">
-                        <label for="vehicle1">person2</label><br>
-                        <input class="check" type="checkbox" name="vehicle2" value="Car">
-                        <label for="vehicle2">person3</label><br><input class="check" type="checkbox" name="vehicle1" value="Bike">
-                        <label for="vehicle1">person4</label><br>
-                        <input class="check" type="checkbox" name="vehicle2" value="Car">
-                        <label for="vehicle2">person</label><br>
+                        <input type="number" id="choice" name="choice">
                         <hr>
+                    </div>
 
-                        <input type="button" value="Add expense" onclick="exp()">
+                    <input type="button" value="Add expense" onclick="exp()">
 
 
-                        <input type="button" value="Calculate Total" id="log" onclick="showpanel2()">
+                    <input type="button" value="Calculate Total" id="log" onclick="showpanel2()">
                 </form>
-
+                </div>
+                <div id="panelex" class="second">
                     <form action="">
                         <h1>Overview</h1>
                         <hr id="top-hr">
@@ -104,19 +95,14 @@
                         <br>
                         <label>Final verdict says that you are owed</label>
                         <input type="number" name="res" value="0" placeholder="result" id="res">
-                        
+
                         <br>
                         <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <input type="button" value="Add another expense ">
+                        <input type="button" value="Add another expense" onclick="showpanelback()">
                     </form>
-                
-            </div>
+                </div>
+        
         </div>
     </div>
-</body></html>
+</body>
+</html>
