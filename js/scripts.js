@@ -31,6 +31,10 @@ function exp() {
     var res = document.getElementById("res");
 		res.value = expense - divide;
     paid.value = expense;
+    alert("This Expense Added !!! Add another or Calculate Total");
+    
+    var change = document.getElementById("choice");
+    choice.value = "0";
     
 }
 
