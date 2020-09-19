@@ -41,7 +41,7 @@
                     <label id="other">Your Name</label>
                     <input type="text" name="you" placeholder="&#xf023 Your Good Name" required>
                     <div id="dynamicInput">
-                        Person 2<br><input type="text" name="myInputs[]" required id="xyz">
+                        Person 2<br><input type="text" name="myInputs[]"  id="xyz" required>
                     </div>
                     <input type="button" value="Add new person" onClick="addInput('dynamicInput');">
                     <hr id="top-hr">
@@ -55,58 +55,59 @@
                     <hr id="top-hr">
 
                     <label>Your Expenses</label>
-                    <input type="double" name="event" placeholder="&#xf0e0 Amount You've Paid" id="expense">
-                    <input type="text" name="event" placeholder="&#xf0e0 What for?">
+                    <input type="double" name="event" placeholder="&#xf0e0 Amount You've Paid" id="expense" required>
+                    <input type="text" name="event" placeholder="&#xf0e0 What for?" required>
                     <br>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" onclick="ShowHideDiv()" checked>
                         <label class="form-check-label" for="exampleRadios1">
                             Split Equally
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" onclick="ShowHide()">
                         <label class="form-check-label" for="exampleRadios2">
                             Split Differently
                         </label>
                         <br>
-                        <a> (select number of people to be excluded from this split)</a>
-                        <input type="number" id="choice" value="0" name="choice">
-                        <hr>
+                        <div id="dvPassport" >
+                            <a> (select number of people to be excluded from this split)</a>
+                            <input type="number" id="choice" value="0" name="choice">
+                        </div>
+                        
                     </div>
 
                     <input type="button" value="Add expense" onclick="exp()">
                     <br>
-                       <a>Added expense before jumping to Calculate Total</a>
-                        
+                    <a>Added expense before jumping to Calculate Total</a>
+
 
                     <input type="button" value="Calculate Total" id="log" onclick="showpanel2()">
                 </form>
-                </div>
-                <div id="panelex" class="second">
-                    <form action="">
-                        <h1>Overview</h1>
-                        <hr id="top-hr">
-                        <label>This event cost the group :
-                            <input type="number" name="calex" value="0" placeholder="urexpense" id="calex">
-                        </label>
-                        <br>
-                        <label>It cost you :</label>
-                        <input type="number" name="cost" value="0" placeholder="cost" id="cost">
-                        <br>
-                        <label>You've Paid :</label>
-                        <input type="number" name="paid" value="0" placeholder="urexpense" id="paid">
-                        <br>
-                        <label>Final verdict says that you are owed</label>
-                        <input type="number" name="res" value="0" placeholder="result" id="res">
+            </div>
+            <div id="panelex" class="second">
+                <form action="">
+                    <h1>Overview</h1>
+                    <hr id="top-hr">
+                    <label>This event cost the group :
+                        <input type="number" name="calex" value="0" placeholder="urexpense" id="calex" readonly>
+                    </label>
+                    <br>
+                    <label>It cost you :</label>
+                    <input type="number" name="cost" value="0" placeholder="cost" id="cost" readonly>
+                    <br>
+                    <label>You've Paid :</label>
+                    <input type="number" name="paid" value="0" placeholder="urexpense" id="paid" readonly>
+                    <br>
+                    <label>Final verdict says that you are owed</label>
+                    <input type="number" name="res" value="0" placeholder="result" id="res" readonly>
 
-                        <br>
-                        <br>
-                        <input type="button" value="Add another expense" onclick="showpanelback()">
-                    </form>
-                </div>
-        
+                    <br>
+                    <br>
+                    <input type="button" value="Add another expense" onclick="showpanelback()">
+                </form>
+            </div>
+
         </div>
     </div>
-</body>
-</html>
+</body></html>

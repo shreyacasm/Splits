@@ -47,13 +47,49 @@ function exp() {
 }
 
 function showpanel() {
-  document.getElementById("panel").style.display = "block";
-  document.getElementById("main").style.display = "none";
+    let allAreFilled = true;
+  document.getElementById("main").querySelectorAll("[required]").forEach(function(i) {
+    if (!allAreFilled) return;
+    if (!i.value) allAreFilled = false;
+    if (i.type === "radio") {
+      let radioValueCheck = false;
+      document.getElementById("myForm").querySelectorAll(`[name=${i.name}]`).forEach(function(r) {
+        if (r.checked) radioValueCheck = true;
+      })
+      allAreFilled = radioValueCheck;
+    }
+  })
+  if (!allAreFilled) {
+    alert('Fill all the fields');
+  }
+    else{
+        document.getElementById("panel").style.display = "block";
+        document.getElementById("main").style.display = "none";
+    }
+  
 }
 
 function showpanel2() {
+    let allAreFilled = true;
+  document.getElementById("main").querySelectorAll("[required]").forEach(function(i) {
+    if (!allAreFilled) return;
+    if (!i.value) allAreFilled = false;
+    if (i.type === "radio") {
+      let radioValueCheck = false;
+      document.getElementById("myForm").querySelectorAll(`[name=${i.name}]`).forEach(function(r) {
+        if (r.checked) radioValueCheck = true;
+      })
+      allAreFilled = radioValueCheck;
+    }
+  })
+  if (!allAreFilled) {
+    alert('Fill all the fields');
+  }
+    else{
   document.getElementById("panelex").style.display = "block";
   document.getElementById("panel").style.display = "none";
+
+    }
 }
 function showpanelback() {
     choice.value = "0";
