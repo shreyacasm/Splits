@@ -19,18 +19,26 @@ function val(){
 }
 
 function exp() {
-    
-    var counter = parseInt(document.getElementById("tot").value);
-    var expense = parseInt(document.getElementById("calex").value) + parseInt(document.getElementById("expense").value);
     var exclude = parseInt(document.getElementById("choice").value);
+    var counter = parseInt(document.getElementById("tot").value);
+    var expense = parseInt(document.getElementById("expense").value);
     
-    var divide = expense/(counter-exclude);
+    var co = parseInt(document.getElementById("cost").value);
+    var cal = parseInt(document.getElementById("calex").value);
+    
+    var present = expense/(counter-exclude);
+    
+    var calex = document.getElementById("calex");
+    calex.value = cal + expense;
+    
     var cost = document.getElementById("cost");
-    cost.value = divide;
-    calex.value = expense;
+    cost.value = present + co;
+    
     var res = document.getElementById("res");
-		res.value = expense - divide;
-    paid.value = expense;
+    res.value = parseInt(document.getElementById("calex").value) -  parseInt(document.getElementById("cost").value);
+    
+    var paid = document.getElementById("paid");
+    paid.value = parseInt(document.getElementById("calex").value);
     alert("This Expense Added !!! Add another or Calculate Total");
     
     var change = document.getElementById("choice");
@@ -48,6 +56,7 @@ function showpanel2() {
   document.getElementById("panel").style.display = "none";
 }
 function showpanelback() {
+    choice.value = "0";
     document.getElementById("panel").style.display = "block";
     document.getElementById("panelex").style.display = "none";
   
