@@ -1,0 +1,134 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  background-image: linear-gradient(10deg, grey 10%, #22313fcc 70%),
+    url(image/money.jpg);
+
+}
+img {
+  width: auto;
+  height: auto;
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+.mainframe {
+  background-image: linear-gradient(20deg, white 1%, #22313fcc 70%),
+    url(image/money.jpg);
+  height: 120vh;
+  padding-top: 10vh;
+  background-attachment:scroll;
+  background-position: center;
+  background-repeat: round;
+  background-size: cover;
+  
+}
+.container {
+    width:400px;
+    margin: auto;
+    padding: 20px;
+    background-color: lightgoldenrodyellow;
+    
+    border-radius: 5px;
+    position:relative;
+    box-shadow: 5px 5px 15px #c9c9c9;
+}
+
+h1{
+    font-size: 25px;
+    display: inline-block;
+    
+}
+h3{
+    display: inline-block;
+    position: absolute;
+    right:30px;
+}
+label{
+    font-size: 20px;
+}
+#other{
+    font-size: 16px;
+    color: darkolivegreen;
+}
+hr{
+    margin: 20px 0px;
+    border: none;
+    border-top: 1px solid #b7b7b7;
+    
+}
+#top hr{
+    width: 380px;
+    margin-left: -20px;
+}
+
+button{
+    width: 100%;
+    padding: 15px 0px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 3px;
+}
+
+a{
+    text-decoration: none;
+    color: #4b4b9f;
+}
+
+input,select{
+    width: 100%;
+    padding: 10px 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px grey solid;
+    
+}
+.form-check-input{
+        width: 10%;
+}
+.check{
+    width: 10%;
+}
+input::placeholder{
+    font-weight: 600;
+    font-family: "Font Awesome 5 Free", "Open Sans", Verdana, Geneva,sans-serif;
+    color: #c3c3c3;
+    font-size: 15px;
+}
+#log{
+    margin: 20px 0px 30px 0px;
+    background-color: #b70000;
+    color:white;
+    opacity: .8;
+    border: none;
+    font-size: 15px;
+    
+}
+#log:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+#frgtpass, #signup{
+    text-align: center;
+}
