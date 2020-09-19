@@ -56,35 +56,50 @@ function ShowHide() {
 
 function exp() {
     var selected = document.querySelectorAll('input[type="checkbox"]:checked').length;
-    
+
 
     var counter = parseInt(document.getElementById("tot").value);
     var exclude = counter - selected;
     var expense = parseInt(document.getElementById("expense").value);
-    
-        var co = parseInt(document.getElementById("cost").value);
-        var cal = parseInt(document.getElementById("calex").value);
-        var present = 0;
-        var lim = 0 ;
-        if(exclude == counter){
-            present = expense / counter;
+
+    var co = parseInt(document.getElementById("cost").value);
+    var cal = parseInt(document.getElementById("calex").value);
+    var present = 0;
+    var lim = 0;
+    if (exclude == counter) {
+        present = expense / counter;
+    } else {
+        present = expense / selected;
+    }
+
+    var calex = document.getElementById("calex");
+    calex.value = cal + expense;
+    var you = parseInt(document.getElementById("you").value);
+    var checkBox = document.getElementById("myCheck");
+    if (checkBox.checked == true) {
+        
+        if(you == 0){
+            var cost = document.getElementById("cost");
+            cost.value = present + co;    
         }
         else{
-            present = expense / selected;
+            var cost = document.getElementById("cost");
+            cost.value = you + co;
         }
         
-        var calex = document.getElementById("calex");
-        calex.value = cal + expense;
-
+ 
+    } 
+    else {
         var cost = document.getElementById("cost");
-        cost.value = present + co;
+        cost.value = co;
+    }
 
-        var res = document.getElementById("res");
-        res.value = parseInt(document.getElementById("calex").value) - parseInt(document.getElementById("cost").value);
+    var res = document.getElementById("res");
+    res.value = parseInt(document.getElementById("calex").value) - parseInt(document.getElementById("cost").value);
 
-        var paid = document.getElementById("paid");
-        paid.value = parseInt(document.getElementById("calex").value);
-        alert("This Expense Added !!! Add another or Calculate Total");
+    var paid = document.getElementById("paid");
+    paid.value = parseInt(document.getElementById("calex").value);
+    alert("This Expense Added !!! Add another or Calculate Total");
 
 
 
