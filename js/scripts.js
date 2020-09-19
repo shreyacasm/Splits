@@ -133,7 +133,7 @@ function showpanel2() {
 }
 
 function showpanelback() {
-    choice.value = "0";
+    
     document.getElementById("panel").style.display = "block";
     document.getElementById("panelex").style.display = "none";
 
