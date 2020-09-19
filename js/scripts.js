@@ -22,7 +22,9 @@ function exp() {
     
     var counter = parseInt(document.getElementById("tot").value);
     var expense = parseInt(document.getElementById("calex").value) + parseInt(document.getElementById("expense").value);
-    var divide = expense/counter;
+    var exclude = parseInt(document.getElementById("choice").value);
+    
+    var divide = expense/(counter-exclude);
     var cost = document.getElementById("cost");
     cost.value = divide;
     calex.value = expense;
