@@ -87,9 +87,6 @@ function exp() {
         alert("This Expense Added !!! Add another or Calculate Total");
 
 
-    
-
-
 
 }
 
@@ -139,8 +136,6 @@ function showpanel2() {
 }
 
 function showpanelback() {
-    
     document.getElementById("panel").style.display = "block";
     document.getElementById("panelex").style.display = "none";
-
 }
