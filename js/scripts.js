@@ -56,8 +56,7 @@ function ShowHide() {
 
 function exp() {
     var selected = document.querySelectorAll('input[type="checkbox"]:checked').length;
-    alert("selected checkboxes are " + selected);
-
+    
 
     var counter = parseInt(document.getElementById("tot").value);
     var exclude = counter - selected;
@@ -65,9 +64,15 @@ function exp() {
     
         var co = parseInt(document.getElementById("cost").value);
         var cal = parseInt(document.getElementById("calex").value);
-
-        var present = expense / (counter - exclude);
-
+        var present = 0;
+        var lim = 0 ;
+        if(exclude == counter){
+            present = expense / counter;
+        }
+        else{
+            present = expense / selected;
+        }
+        
         var calex = document.getElementById("calex");
         calex.value = cal + expense;
 
@@ -87,6 +92,7 @@ function exp() {
 
 
 }
+
 
 function showpanel() {
     let allAreFilled = true;
